@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--     <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>swiper</title>
+    <link rel="stylesheet" href="./Swiper-4.1.0/css/swiper.min.css">
+    <style>
+        .swiper-container {
+            width: 460px;
+            margin: 0 auto;
+        }
+
+        .swiper-slide {
+            width: 460px;
+        }
+
+        .swiper-container img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./images/l1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/l2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/l3.jpg" alt="">
+            </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="./Swiper-4.1.0/js/swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            //autoplay: true, //可选选项，自动滑动
+            autoplay: {
+                // 翻页延迟事件
+                delay: 1000,
+                // 最后一张是否停止 与loop冲突
+                stopOnLastSlide: false,
+                // 用户操作swiper之后，是否禁止autoplay。默认为true：停止。
+                disableOnInteraction: true,
+            },
+            //前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            //自动循环轮播
+            loop: true,
+            //分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            //切换反弹效果
+            // freeMode : true,
+        })
+    </script>
+
+</body>
+
+</html>

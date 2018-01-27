@@ -1,0 +1,234 @@
+// 引入公共初始化lss
+@import "./base.less";
+
+/*设置页面容器最大宽度容器  */
+.container {
+    max-width: 640px;
+    height: 1000px;
+    margin: 0px auto;
+    background-color: #eee;
+
+}
+/* 头部搜索登录 */
+#header {
+    // 吸顶(托标,宽度)
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    height: 40px;
+    padding:5px;
+    z-index: 999;
+
+    .search-form {
+        // height: 50px;
+        // width: 100px;
+        // position: relative;
+        // width: 100%;
+        margin-right: 70px;
+        /*JD图标  */
+        .icon-JD {
+            background-image:url("../images/sprites.png");
+            background-size: 200px 200px;
+            width: 23px;
+            height: 18px;
+            position: absolute;
+            left:30px;
+            top:12px;
+        }
+        .icon-fangDa {
+            background-image:url("../images/sprites.png");
+            background-size: 200px 200px;
+            width: 20px;
+            height: 20px;
+            left:55px;
+            top:12px;
+            position: absolute;
+            background-position: -81px 0;
+
+        }
+        /* 搜搜狂 */
+        >input {
+            width: 100%;
+            height: 30px;
+            border-radius: 35px;
+            margin-left: 10px;
+            padding: 0px 60px;
+            font-size: 16px
+        }           
+    }
+    /* 登录标签 */
+    .login {
+        position: absolute;
+        text-align: center;
+        right: 10px;
+        width: 60px;
+        height: 40px;
+        line-height: 40px;
+        top: 0px;
+        right:0;
+        color: #fff;        
+    }
+}
+
+/* 轮播图 */
+#slide {
+    width: 100%;
+    .swiper-container {
+        width: 100%;
+        .swiper-wrapper {
+            width: 100%;
+            .swiper-slide {
+                width: 800%;
+                >img {
+                   width: 800%/8
+                }
+            }
+        }
+    }
+
+    /* 溢出隐藏 */
+    // overflow: hidden;
+    // position: relative; 
+
+    /* 轮播图片 */
+    // >ul {
+    //     //* 10张图片,十倍父盒子宽度 */
+    //     width: 1000%;
+    //     >li {
+    //         list-style: none;
+    //         float: left;
+    //         /* 相对父盒子1/10 */
+    //         width: 10%; 
+    //         >a {
+    //             display:block;
+    //             width: 100%;
+    //             >img {
+    //                 width: 100%;
+    //             }
+    //         }
+    //     }
+    // }
+    // /* 浮点 */
+    // >ol {
+    //     position: absolute;
+    //     bottom: 10px;
+    //     left: 50%;
+    //     transform: translate(-50%);
+
+    //     >li {
+    //         float: left;
+    //         width: 10px;
+    //         height: 10px;
+    //         border: 1px solid #ccc;
+    //         border-radius: 50%;
+    //         margin-left: 5px;
+    //         &.active {
+    //             background-color: #fff;
+    //         }
+    //     }
+    // }
+}
+/* 导航部分 */
+#nav {
+    background-color: #fff;
+    >ul {
+        padding: 10px 0;
+        >li  {
+            float: left;
+            width: 25%;
+            text-align: center;
+            margin-bottom: 10px;
+            >a {
+                >img {
+                    width: 40px;
+                    height: 40px;
+                }
+                >p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+/* 产品部分 */
+#products {
+    padding: 6px 6px;
+    /* 秒杀部分 */
+    .seckill {
+        margin-top: 10px;
+        background-color: #fff;
+        padding: 5px 5px;
+        box-shadow: 0px 0px 5px #666;
+        .seckill-title {
+            height: 30px;
+            line-height: 30px;
+            .seckill-clock {
+                width: 20px;
+                height: 25px;
+                background-image: url("../images/seckill-icon.png");
+                background-size: 20px 25px;
+                float: left;
+            }
+            .seckill-name {
+                float: left;
+                margin-left: 10px;
+                color: @main-color;
+            }
+            .seckill-count {
+                margin-left: 10px;                
+                float: left;
+                margin-top: 6px;
+
+                >span {
+                    margin-right: 5px;
+                    float: left;
+                    text-align: center;
+                    line-height: 20px;
+                    background-color: #000;
+                    color: #fff;
+                    width: 12px;
+                    height: 20px;
+                    &:nth-of-type(3n) {
+                        background-color: #fff;
+                        color: #000;
+                    }
+                }
+                
+            }
+            .seckill-more {
+                float: right;
+                font-size: 14px;
+            }
+        }
+        .seckill-body {
+            margin: 10px 20px;
+            >ul {
+                width: 100%;
+                >li {
+                    width: 100%/3;                    
+                    float: left;
+                    &+li {
+                        border-left: 1px solid #ccc;
+                    }
+                    >a {
+                        text-align: center;
+                        display: block;
+                        height: 100%;
+                        >img {
+                            width: 60%;
+                        }
+                        >p {
+                            color: @main-color;
+                            font-size: 13px;
+                        }
+                        >del {
+                            font-size: 13px;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
